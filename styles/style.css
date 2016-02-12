@@ -1,0 +1,16 @@
+/*basic styling added after Bootstrap junk*/
+
+
+
+body { 
+	padding-top: 70px;
+}
+
+.navbar-form {
+	background-color: lightgrey;
+}
+
+#message-input {
+	width: 700px;
+}
+
