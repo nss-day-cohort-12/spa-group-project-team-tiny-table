@@ -1,7 +1,23 @@
-// Initial messages JSON file
-// a JSON object with one key-value pair
-// the Key is "messages"
-// the value is an array of objects
-// the objects initially only have one key value pair
-// "text": "message"
-// we could add more attributes to the objects later, ones such as timestamps and user-names
+{
+	"messages": [{
+		"text": "Here is a message"
+	}, {
+		"text": "Here is another message"
+	},{
+		"text": "Here is a message"
+	}, {
+		"text": "Here is another message"
+	},{
+		"text": "Here is a message"
+	}, {
+		"text": "Here is another message"
+	},{
+		"text": "Here is a message"
+	}, {
+		"text": "Here is another message"
+	},{
+		"text": "Here is a message"
+	}, {
+		"text": "Here is another message"
+	}]
+}
