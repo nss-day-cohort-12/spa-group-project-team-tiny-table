@@ -26,22 +26,10 @@ var Chatty = (function() {
 					msgBoardEl.innerHTML += currText;
 				}	
 
-
-
-
 			})
 			
 		}
 	}
-
-
-
-
-
-
-
-
-
 
 
 })();

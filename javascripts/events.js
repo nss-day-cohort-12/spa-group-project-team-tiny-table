@@ -20,3 +20,14 @@ clearBoard.addEventListener("click", function(event) {
 	//set the inner HTML of the message board div to empty
 })
 
+
+// event listeners for the checkboxes
+var darkTheme = document getElementById("inlineCheckbox1");
+darktheme.addEventListener("change", function(event){
+	// inverse all the colors
+})
+
+var bigText = document.getElementById("inlineCheckbox2");
+bigText.addEventListener("change", function(event){
+	// increase the size of the text in the message board
+})
