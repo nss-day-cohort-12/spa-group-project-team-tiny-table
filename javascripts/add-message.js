@@ -7,7 +7,7 @@ prevChatty.addMessage = function(inputMessage){
 	// put stuff here to add message to DOM
 }
 
-return prevChatty;
+return prevchatty;
 
 
 })(Chatty);
