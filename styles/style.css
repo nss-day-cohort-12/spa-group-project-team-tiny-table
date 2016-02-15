@@ -13,3 +13,31 @@ body {
 	width: 700px;
 }
 
+#message-board {
+	border: 2px solid #000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-shadow: 3px 3px 5px 0px #4c4c4c;
+}
+
+.col-md-10 {
+	word-wrap: break-word;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid black;
+}
+
+.row::after {
+	height: 2px;
+	background-color: orange;
+}
+
+.btn.btn-default.delBtn {
+	background-color: red;
+	color: white;
+	margin-top: 10px;
+}
+
+/*.center-line {
+	border-bottom: 1px solid black;
+}*/
