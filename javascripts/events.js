@@ -12,6 +12,15 @@ messageContainer.addEventListener("click", function(event){
   }
 })
 
+
+var clearBtnEl = document.getElementById("clearBtn");
+
+clearBtnEl.addEventListener("click", function(){
+  messageContainer.innerHTML = "";
+})
+
+
+
 // event listener for the text input box
 var messageInput = document.getElementById("message-input");
 messageInput.addEventListener("keyup", function(event){
