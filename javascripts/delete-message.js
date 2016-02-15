@@ -19,6 +19,7 @@ var Chatty = (function(prevChatty) {
 
     //Set messages to our newMessages array
     Chatty.setMessages(newMessages);
+
 	}
 
 	return prevChatty;

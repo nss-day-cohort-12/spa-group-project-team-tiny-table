@@ -1,26 +1,33 @@
 // Event Listeners
 // add event handlers to all the things here
 
+//get reference to DOM elements
 var messageContainer = document.getElementById("message-board");
+var clearBtnEl = document.getElementById("clearBtn");
 
 messageContainer.addEventListener("click", function(event){
-	// if the target is the delete button, call the delete message function
+  // if the target is the delete button, call the delete message function
   if (event.target.className.indexOf('delBtn') >= 0){
     // console.log("delete button pressed");
     var rowId = event.target.parentNode.parentNode.id;
     Chatty.delMessage(rowId);
+
+    //if no messages left then disable the clear button
+    var messages = Chatty.getMessages();
+    if (messages.length === 0){
+      var clearBtnEl = document.getElementById('clearBtn');
+      clearBtnEl.disabled = true;
+    }
   }
 })
 
-
-var clearBtnEl = document.getElementById("clearBtn");
-
+//event listener for the clear all button
 clearBtnEl.addEventListener("click", function(){
+  clearBtnEl.disabled = true;
   messageContainer.innerHTML = "";
   //clear everything from the messages array
   Chatty.setMessages([]);
 })
-
 
 
 // event listener for the text input box
@@ -31,7 +38,11 @@ messageInput.addEventListener("keyup", function(event){
 		console.log("value", messageInput.value);
 		event.preventDefault;
 		var id = `msg--${Chatty.getMessages.length}`;
-		Chatty.addNewMessage(messageInput.value, id);
+    Chatty.addNewMessage(messageInput.value, id);
+    //clear input box
+    messageInput.value = "";
+    //enable clear button
+    clearBtnEl.disabled = false;
 	}
 })
 
