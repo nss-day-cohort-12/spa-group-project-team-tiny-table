@@ -27,6 +27,9 @@ var Chatty = (function() {
 		},
 		getMessages: function() {
 			return messages;
+		},
+		setMessages: function(updatedMessages){
+			messages = updatedMessages;
 		}
 	}
 })();

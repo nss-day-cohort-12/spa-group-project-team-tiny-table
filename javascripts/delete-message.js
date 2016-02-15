@@ -4,7 +4,21 @@
 var Chatty = (function(prevChatty) {
 
 	prevChatty.delMessage = function(msgId) {
-    var msgEl = document.getElementById(msgId).remove();
+    //remove the message element from the DOM
+    var msgEl = document.getElementById(msgId);
+    msgEl.remove();
+
+    //get the message text for the element to be deleted
+    var msgText = msgEl.firstChild.innerHTML;
+
+    //get the messages array
+    var newMessages = Chatty.getMessages();
+
+    //filter out the message that we want to delete
+    newMessages = newMessages.filter((e) => !(e.text === msgText));
+
+    //Set messages to our newMessages array
+    Chatty.setMessages(newMessages);
 	}
 
 	return prevChatty;
