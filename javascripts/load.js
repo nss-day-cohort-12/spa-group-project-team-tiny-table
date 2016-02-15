@@ -2,36 +2,33 @@
 // original functions include Loading and parsing the JSON file
 //    and a function to populate the board with initial messages
 var Chatty = (function() {
-	var initMessages =[];   //hold test messages from JSON file
+	var messages =[];   //hold test messages from JSON file
 
+	function loadInitMsgs(){
+			var msgBoardEl = document.getElementById("message-board");
+			var currText = "";
+			messages = JSON.parse(this.responseText).messages;
+			for (var i = 0; i < messages.length; i++) {    
+				console.log("JSON file:", currText);
+				currText = `<div class="row" id="msg--${i}"><div class="col-md-10">${messages[i].text}</div>
+										<div class="col-md-2"><button class="btn btn-default delBtn">Delete</button></div></div>`;
+				msgBoardEl.innerHTML += currText;
+			}	
 
+		}
 
 
 	return {
-		loadMessages: function() {
-			//blahh XHR crap
-			var msgBoardEl = document.getElementById("message-board");
-			var currText = "";
+		loadMessages: function() {			
 			var loader = new XMLHttpRequest();
 			loader.open("GET", "javascripts/messages.json");
 			loader.send();
-			//parse json shit
-			loader.addEventListener("load", function(){
-				initMessages = JSON.parse(this.responseText).messages;
-				for (var i = 0; i < initMessages.length; i++) {    
-			//loop over junk and build a string to insert into DOM
-					console.log("JSON file:", currText);
-					currText = `<div class="row"><div class="col-md-10">${initMessages[i].text}</div>
-											<div class="col-md-2"><button class="btn btn-default delBtn">Delete</button></div></div>`;
-					msgBoardEl.innerHTML += currText;
-				}	
-
-			})
-			
+			loader.addEventListener("load", loadInitMsgs)			
+		},
+		getMessages: function() {
+			return messages;
 		}
 	}
-
-
 })();
 
 Chatty.loadMessages();

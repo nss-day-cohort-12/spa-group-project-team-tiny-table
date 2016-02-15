@@ -12,18 +12,19 @@ messageContainer.addEventListener("click", function(event){
 var messageInput = document.getElementById("message-input");
 messageInput.addEventListener("keyup", function(event){
 	// if the key is the enter key (13) then send the text box value to the add message function
-})
-
-// event listener for the clear board button
-var clearBoard = document.getElementById("clearBtn");
-clearBoard.addEventListener("click", function(event) {
-	//set the inner HTML of the message board div to empty
+console.log("blah blah");
+	if (event.keyCode === 13){
+		console.log("value", messageInput.value);
+		event.preventDefault;
+		var id = `msg--${Chatty.getMessages.length}`;
+		Chatty.addNewMessage(messageInput.value, id);
+	}
 })
 
 
 // event listeners for the checkboxes
-var darkTheme = document getElementById("inlineCheckbox1");
-darktheme.addEventListener("change", function(event){
+var darkTheme = document.getElementById("inlineCheckbox1");
+darkTheme.addEventListener("change", function(event){
 	// inverse all the colors
 })
 
