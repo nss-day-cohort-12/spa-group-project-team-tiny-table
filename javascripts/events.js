@@ -5,8 +5,12 @@ var messageContainer = document.getElementById("message-board");
 
 messageContainer.addEventListener("click", function(event){
 	// if the target is the delete button, call the delete message function
+  if (event.target.className.indexOf('delBtn') >= 0){
+    // console.log("delete button pressed");
+    var rowId = event.target.parentNode.parentNode.id;
+    Chatty.delMessage(rowId);
+  }
 })
-
 
 // event listener for the text input box
 var messageInput = document.getElementById("message-input");

@@ -9,7 +9,7 @@ var Chatty = (function() {
 			var currText = "";
 			messages = JSON.parse(this.responseText).messages;
 			for (var i = 0; i < messages.length; i++) {    
-				console.log("JSON file:", currText);
+				//console.log("JSON file:", currText);
 				currText = `<div class="row" id="msg--${i}"><div class="col-md-10">${messages[i].text}</div>
 										<div class="col-md-2"><button class="btn btn-default delBtn">Delete</button></div></div>`;
 				msgBoardEl.innerHTML += currText;

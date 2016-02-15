@@ -3,10 +3,9 @@
 
 var Chatty = (function(prevChatty) {
 
-	prevChatty.delMessage = function(event) {
-
+	prevChatty.delMessage = function(msgId) {
+    var msgEl = document.getElementById(msgId).remove();
 	}
-
 
 	return prevChatty;
 
