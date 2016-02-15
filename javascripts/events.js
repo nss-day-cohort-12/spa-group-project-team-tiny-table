@@ -17,6 +17,8 @@ var clearBtnEl = document.getElementById("clearBtn");
 
 clearBtnEl.addEventListener("click", function(){
   messageContainer.innerHTML = "";
+  //clear everything from the messages array
+  Chatty.setMessages([]);
 })
 
 
