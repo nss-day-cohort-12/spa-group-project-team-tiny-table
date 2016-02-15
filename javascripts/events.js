@@ -27,7 +27,6 @@ clearBtnEl.addEventListener("click", function(){
 var messageInput = document.getElementById("message-input");
 messageInput.addEventListener("keyup", function(event){
 	// if the key is the enter key (13) then send the text box value to the add message function
-console.log("blah blah");
 	if (event.keyCode === 13){
 		console.log("value", messageInput.value);
 		event.preventDefault;
