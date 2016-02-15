@@ -26,9 +26,34 @@ console.log("blah blah");
 var darkTheme = document.getElementById("inlineCheckbox1");
 darkTheme.addEventListener("change", function(event){
 	// inverse all the colors
+	var colorEl = document.getElementsByTagName('body');
+	if (darkTheme.checked){
+		colorEl[0].style.backgroundColor = "darkgrey";
+		colorEl[0].style.color = "white";
+	} else if (!darkTheme.checked) {
+		colorEl[0].style.backgroundColor = "white";
+		colorEl[0].style.color = "black";
+	}
 })
 
 var bigText = document.getElementById("inlineCheckbox2");
 bigText.addEventListener("change", function(event){
 	// increase the size of the text in the message board
+	var textSizeEl = document.getElementById('message-board');
+	if (bigText.checked){
+		textSizeEl.style.fontSize = "2em";
+	} else {
+		textSizeEl.style.fontSize = "1em";
+	}
 })
+
+
+
+
+
+
+
+
+
+
+
