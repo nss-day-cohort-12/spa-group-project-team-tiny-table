@@ -26,6 +26,7 @@ var Chatty = (function(prevChatty) {
 									<div class="col-md-2"><button class="btn btn-default delBtn">Delete</button><button class="btn btn-default editBtn">Edit</button>
 									<p id="timestamp">${timeStamp}</p></div></div>`;
 			msgBoardEl.innerHTML += currText;
+			msgBoardEl.lastChild.scrollIntoView();
 			console.log("msg array", msgArray);
 		}
 	}

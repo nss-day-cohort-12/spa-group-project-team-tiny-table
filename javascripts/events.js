@@ -83,13 +83,13 @@ messageEdit.addEventListener("keyup", function(event){
 var darkTheme = document.getElementById("inlineCheckbox1");
 darkTheme.addEventListener("change", function(event){
 	// inverse all the colors
-	var colorEl = document.getElementsByTagName('body');
+	var colorEl = document.getElementById('message-board');
 	if (darkTheme.checked){
-		colorEl[0].style.backgroundColor = "darkgrey";
-		colorEl[0].style.color = "white";
+		colorEl.style.backgroundColor = "darkgrey";
+		colorEl.style.color = "white";
 	} else if (!darkTheme.checked) {
-		colorEl[0].style.backgroundColor = "white";
-		colorEl[0].style.color = "black";
+		colorEl.style.backgroundColor = "white";
+		colorEl.style.color = "black";
 	}
 })
 
