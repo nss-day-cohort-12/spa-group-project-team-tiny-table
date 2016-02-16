@@ -9,6 +9,7 @@ var clearBtnEl = document.getElementById("clearBtn");
 var messageInput = document.getElementById("message-input");
 var messageEdit = document.getElementById("message-edit");
 
+//hold the message row we are editing
 var clickedMessage;
 
 messageContainer.addEventListener("click", function(event){
@@ -35,8 +36,6 @@ messageContainer.addEventListener("click", function(event){
 
     messageEdit.value = clickedMessage.firstChild.innerHTML;
   }
-
-
 })
 
 //event listener for the clear all button
@@ -47,11 +46,11 @@ clearBtnEl.addEventListener("click", function(){
   Chatty.setMessages([]);
 })
 
-
+//Add new message on enter key press in message input box
 messageInput.addEventListener("keyup", function(event){
 	// if the key is the enter key (13) then send the text box value to the add message function
 	if (event.keyCode === 13){
-		console.log("value", messageInput.value);
+		// console.log("value", messageInput.value);
 		event.preventDefault;
 		var id = `msg--${Chatty.getMessages.length}`;
     Chatty.addNewMessage(messageInput.value, id);
