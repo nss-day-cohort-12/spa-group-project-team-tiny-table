@@ -5,6 +5,13 @@
 var messageContainer = document.getElementById("message-board");
 var clearBtnEl = document.getElementById("clearBtn");
 
+// event listener for the text input box
+var messageInput = document.getElementById("message-input");
+var messageEdit = document.getElementById("message-edit");
+
+//hold the message row we are editing
+var clickedMessage;
+
 messageContainer.addEventListener("click", function(event){
   // if the target is the delete button, call the delete message function
   if (event.target.className.indexOf('delBtn') >= 0){
@@ -19,6 +26,16 @@ messageContainer.addEventListener("click", function(event){
       clearBtnEl.disabled = true;
     }
   }
+
+  //if the target is the edit button, put the text in the edit input box
+  if (event.target.className.indexOf('editBtn') >= 0){
+    messageInput.classList.add("hidden");
+    messageEdit.classList.remove("hidden");
+
+    clickedMessage = event.target.parentNode.parentNode;
+
+    messageEdit.value = clickedMessage.firstChild.innerHTML;
+  }
 })
 
 //event listener for the clear all button
@@ -29,13 +46,11 @@ clearBtnEl.addEventListener("click", function(){
   Chatty.setMessages([]);
 })
 
-
-// event listener for the text input box
-var messageInput = document.getElementById("message-input");
+//Add new message on enter key press in message input box
 messageInput.addEventListener("keyup", function(event){
 	// if the key is the enter key (13) then send the text box value to the add message function
 	if (event.keyCode === 13){
-		console.log("value", messageInput.value);
+		// console.log("value", messageInput.value);
 		event.preventDefault;
 		var id = `msg--${Chatty.getMessages.length}`;
     Chatty.addNewMessage(messageInput.value, id);
@@ -46,6 +61,15 @@ messageInput.addEventListener("keyup", function(event){
 	}
 })
 
+//update message on message board as user is typing their edit
+messageEdit.addEventListener("keyup", function(event){
+  clickedMessage.firstChild.innerHTML = messageEdit.value
+  if (event.keyCode === 13) {
+    event.preventDefault;
+    messageEdit.classList.add("hidden");
+    messageInput.classList.remove("hidden");
+  }
+})
 
 // event listeners for the checkboxes
 var darkTheme = document.getElementById("inlineCheckbox1");
