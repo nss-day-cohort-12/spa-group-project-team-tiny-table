@@ -3,22 +3,39 @@
 
 body { 
 	padding-top: 70px;
+	background-image: url(http://img.photobucket.com/albums/v285/picturekid/pastelgeometricbackground_zpsct8k7kjy.jpg);
 }
 
 .navbar-form {
-	background-color: lightgrey;
+	background-image: url(http://img.photobucket.com/albums/v285/picturekid/weathered-wood-grain-texture_zps2vlyftha.jpg);
+	opacity: 60%;
+	border-bottom: 4px solid black;
+	border-top: 2px solid black;
+	box-shadow: 0px 5px 20px 3px #333;
 }
 
 #message-input,
 #message-edit {
 	width: 700px;
+	box-shadow: inset 2px 2px 5px 2px #444;
+	border: 1px solid black;
 }
+
+#clearBtn, #message-input, #inlineCheckbox1, #inlineCheckbox2 {
+	margin-top: 5px;
+} 
 
 .navbar-fixed-top {
   margin-top: 0;
 }
 
+#brand-id {
+	max-width: 100%;
+	max-height: 100%;
+}
+
 #message-board {
+	background-color: white;
 	border: 2px solid #000;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -38,15 +55,19 @@ body {
 }
 
 .btn.btn-default.delBtn {
-	background-color: #2effff;
+	background-color: #ff3333;
 	color: white;
 	margin: 10px;
+	border: 1px solid #4d3300;
+	box-shadow: 1px 1px 5px 1px #777;
 }
 
 .btn.btn-default.editBtn {
-  background-color: #fe6dbc;
+  background-color: #009999;
   color: white;
   margin: 10px;
+  border: 1px solid #4d3300;
+  box-shadow: 1px 1px 5px 1px #777;
 }
 
 
