@@ -15,6 +15,11 @@ var Chatty = (function(prevChatty) {
 			newMessageObj.text = inputMessage;
 			newMessageObj.date = timeStamp;
 			var msgArray = Chatty.getMessages();
+			console.log("msgArray.length", msgArray.length);
+			if (msgArray.length === 20){
+				msgBoardEl.firstChild.remove();
+				msgArray.shift();
+			}
 			msgArray.push(newMessageObj);
 			Chatty.setMessages(msgArray);
 			currText = `<div class="row" id="${newMsgId}"><div class="col-md-10">${inputMessage}</div>
