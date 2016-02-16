@@ -15,7 +15,7 @@ body {
 	opacity: 60%;
 	border-bottom: 4px solid black;
 	border-top: 2px solid black;
-	box-shadow: 0px 5px 20px 3px #333;
+	box-shadow: 0px 3px 10px 1px #444;
 }
 
 #message-input,
@@ -29,6 +29,13 @@ body {
 	margin-top: 5px;
 } 
 
+#clearBtn {
+	color: #001a1a;
+	background-color: #80ffdd;
+	box-shadow: 1px 1px 2px 1px #777;
+	border: 2px solid #008080;
+}
+
 .navbar-fixed-top {
   margin-top: 0;
 }
@@ -39,9 +46,11 @@ body {
 }
 
 #message-board {
-	background-color: white;
-	border: 2px solid #000;
-	box-shadow: 3px 3px 5px 0px #4c4c4c;
+	background-color: #fffff3;
+	border: 4px solid #1a0d00;
+	box-shadow: 3px 3px 15px 0px #333;
+	margin-bottom: 90px;
+	margin-top: 40px;
 }
 
 .col-md-10 {
@@ -60,7 +69,7 @@ body {
 	color: white;
 	margin: 10px;
 	border: 1px solid #4d3300;
-	box-shadow: 1px 1px 5px 1px #777;
+	box-shadow: 1px 1px 2px 1px #777;
 }
 
 .btn.btn-default.editBtn {
@@ -68,7 +77,26 @@ body {
   color: white;
   margin: 10px;
   border: 1px solid #4d3300;
-  box-shadow: 1px 1px 5px 1px #777;
+  box-shadow: 1px 1px 2px 1px #777;
+}
+
+.navbar-bottom {
+	border-top: 5px solid #1a0d00;
+	border-bottom: 5px solid #1a0d00;
+	text-align: center;
+	color: black;
+	background-image: url(http://img.photobucket.com/albums/v285/picturekid/wovenbackground_zpsh3n90qnt.jpg);
+}
+
+footer {
+	margin-top: 20px;
+}
+
+#brand-bottom {
+	width: 228px;
+	height: 153px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .checkbox-inline {
