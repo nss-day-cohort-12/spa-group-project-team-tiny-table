@@ -25,7 +25,7 @@ body {
 	border: 1px solid black;
 }
 
-#clearBtn, #message-input, #inlineCheckbox1, #inlineCheckbox2 {
+#clearBtn, #message-input, #inlineCheckbox1, #inlineCheckbox2, #message-edit {
 	margin-top: 5px;
 } 
 
