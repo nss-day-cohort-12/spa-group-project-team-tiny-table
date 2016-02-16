@@ -88,7 +88,7 @@ darkTheme.addEventListener("change", function(event){
 		colorEl.style.backgroundColor = "darkgrey";
 		colorEl.style.color = "white";
 	} else if (!darkTheme.checked) {
-		colorEl.style.backgroundColor = "white";
+		colorEl.style.backgroundColor = "#fffff3";
 		colorEl.style.color = "black";
 	}
 })
