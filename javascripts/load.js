@@ -2,7 +2,7 @@
 // original functions include Loading and parsing the JSON file
 //    and a function to populate the board with initial messages
 var Chatty = (function() {
-	var messages =[];   //hold test messages from JSON file
+	var messages = [];   //hold test messages from JSON file
 
 	function loadInitMsgs(){
 			var msgBoardEl = document.getElementById("message-board");
@@ -11,7 +11,8 @@ var Chatty = (function() {
 			for (var i = 0; i < messages.length; i++) {    
 				//console.log("JSON file:", currText);
 				currText = `<div class="row" id="msg--${i}"><div class="col-md-10">${messages[i].text}</div>
-										<div class="col-md-2"><button class="btn btn-default delBtn">Delete</button><button class="btn btn-default editBtn">Edit</button></div></div>`;
+										<div class="col-md-2"><button class="btn btn-default delBtn">Delete</button><button class="btn btn-default editBtn">Edit</button>
+										<p id="timestamp">${messages[i].date}</p></div></div>`;
 				msgBoardEl.innerHTML += currText;
 			}	
 
