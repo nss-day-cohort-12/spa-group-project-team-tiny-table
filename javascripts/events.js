@@ -1,5 +1,12 @@
 // Event Listeners
 // add event handlers to all the things here
+// add variables to hold the current time
+
+
+
+
+
+
 
 //get reference to DOM elements
 var messageContainer = document.getElementById("message-board");
@@ -53,7 +60,8 @@ messageInput.addEventListener("keyup", function(event){
 		// console.log("value", messageInput.value);
 		event.preventDefault;
 		var id = `msg--${Chatty.getMessages.length}`;
-    Chatty.addNewMessage(messageInput.value, id);
+		var currDate = new Date();
+    Chatty.addNewMessage(messageInput.value, id, currDate.toString());
     //clear input box
     messageInput.value = "";
     //enable clear button
