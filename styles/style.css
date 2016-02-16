@@ -99,11 +99,13 @@ footer {
 	margin-bottom: 10px;
 }
 
+.checkbox-inline {
+	color: white;
+	font-size: medium;
+}
+
 .hidden {
   display: none;
 
 }
 
-/*.center-line {
-	border-bottom: 1px solid black;
-}*/
